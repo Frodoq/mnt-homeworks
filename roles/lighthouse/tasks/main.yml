@@ -1,0 +1,57 @@
+---
+- name: Install dependencies
+  apt:
+    name: 
+      - git
+      - nginx
+    state: present
+    update_cache: yes
+
+- name: Create Lighthouse directory
+  file:
+    path: /opt/lighthouse
+    state: directory
+    mode: 0755
+
+- name: Clone Lighthouse repository
+  git:
+    repo: "https://github.com/VKCOM/lighthouse.git"
+    dest: /opt/lighthouse
+    version: master
+    force: yes
+
+- name: Configure Nginx
+  template:
+    src: "nginx.conf.j2"
+    dest: "/etc/nginx/sites-available/lighthouse.conf"
+  notify: restart nginx
+
+- name: Enable Lighthouse site
+  file:
+    src: "/etc/nginx/sites-available/lighthouse.conf"
+    dest: "/etc/nginx/sites-enabled/lighthouse.conf"
+    state: link
+
+- name: Disable default site
+  file:
+    path: "/etc/nginx/sites-enabled/default"
+    state: absent
+
+- name: Ensure nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Set correct permissions
+  file:
+    path: /opt/lighthouse
+    state: directory
+    mode: 0755
+    recurse: yes
+
+- name: Validate Nginx configuration
+  command: nginx -t
+  register: nginx_test
+  changed_when: false
+  notify: restart nginx
