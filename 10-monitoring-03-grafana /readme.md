@@ -33,15 +33,15 @@
 1) Утилизация CPU (100-idle):
 100 - (avg by(instance)(irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
    
-3) Load Average (1/5/15):
+2) Load Average (1/5/15):
 node_load1{}
 node_load5{}
 node_load15{}
 
-5) Свободная оперативная память:
+3) Свободная оперативная память:
 node_memory_MemFree_bytes{}
 
-7) Свободное место на файловой системе:
+4) Свободное место на файловой системе:
 node_filesystem_avail_bytes{mountpoint="/"}
 
 ## Задание 3
