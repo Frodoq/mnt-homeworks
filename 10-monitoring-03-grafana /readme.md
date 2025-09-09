@@ -22,7 +22,6 @@
 
 Создайте Dashboard и в ней создайте Panels:
 
-- 
 - утилизация CPU для nodeexporter (в процентах, 100-idle);
 - CPULA 1/5/15;
 - количество свободной оперативной памяти;
@@ -31,17 +30,16 @@
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
 <img width="1919" height="735" alt="image" src="https://github.com/user-attachments/assets/3283e475-5cb1-4b16-9f8d-7f755528db66" />
+
+- воть:
 - Утилизация CPU (100-idle):
 100 - (avg by(instance)(irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
-   
 - Load Average (1/5/15):
 node_load1{}
 node_load5{}
 node_load15{}
-
 - Свободная оперативная память:
 node_memory_MemFree_bytes{}
-
 - Свободное место на файловой системе:
 node_filesystem_avail_bytes{mountpoint="/"}
 
