@@ -32,13 +32,16 @@
 <img width="1919" height="735" alt="image" src="https://github.com/user-attachments/assets/3283e475-5cb1-4b16-9f8d-7f755528db66" />
 1) Утилизация CPU (100-idle):
 100 - (avg by(instance)(irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
-2) Load Average (1/5/15):
+   
+3) Load Average (1/5/15):
 node_load1{}
 node_load5{}
 node_load15{}
-3) Свободная оперативная память:
+
+5) Свободная оперативная память:
 node_memory_MemFree_bytes{}
-4) Свободное место на файловой системе:
+
+7) Свободное место на файловой системе:
 node_filesystem_avail_bytes{mountpoint="/"}
 
 ## Задание 3
