@@ -38,10 +38,10 @@ node_load1{}
 node_load5{}
 node_load15{}
 
-3) Свободная оперативная память:
+4) Свободная оперативная память:
 node_memory_MemFree_bytes{}
 
-4) Свободное место на файловой системе:
+6) Свободное место на файловой системе:
 node_filesystem_avail_bytes{mountpoint="/"}
 
 ## Задание 3
