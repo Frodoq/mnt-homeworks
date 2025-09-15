@@ -23,6 +23,7 @@ Filebeat следует сконфигурировать для отправки
 
 ## Ответ:
 <img width="1416" height="623" alt="image" src="https://github.com/user-attachments/assets/5d9b9c56-3b34-4570-a6b5-05aee303c288" />
+<img width="1872" height="931" alt="image" src="https://github.com/user-attachments/assets/0728573e-412a-409f-a0ed-3e887ab75f06" />
 
 
 
@@ -38,6 +39,8 @@ Filebeat следует сконфигурировать для отправки
  
 ## Ответ:
 
+<img width="689" height="432" alt="image" src="https://github.com/user-attachments/assets/53a6350b-cd68-42a8-a808-b7b4dd608794" />
+<img width="931" height="725" alt="image" src="https://github.com/user-attachments/assets/51c257b1-cc1c-43cb-8305-4ce59b82a58e" />
 
 
 
