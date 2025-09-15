@@ -22,6 +22,7 @@ Filebeat следует сконфигурировать для отправки
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
 ## Ответ:
+<img width="1416" height="623" alt="image" src="https://github.com/user-attachments/assets/5d9b9c56-3b34-4570-a6b5-05aee303c288" />
 
 
 
